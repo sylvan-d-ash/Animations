@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Z8D-jk-wMF">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Simple Text Animation View Controller-->
+        <scene sceneID="qps-No-wUH">
+            <objects>
+                <viewController id="Z8D-jk-wMF" customClass="SimpleTextAnimationViewController" customModule="Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VXS-Ci-6Cf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="ybT-wO-SiQ">
+                                <rect key="frame" x="40" y="386" width="334" height="124"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Stormlight Archives" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gbd-cF-X12">
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="29"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oathbringer. The latest book in the amazing series by Brandon Sanderson. Definitely a must read for everyone" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCH-RE-hVH">
+                                        <rect key="frame" x="0.0" y="63" width="334" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ccK-kJ-IIF" firstAttribute="trailing" secondItem="ybT-wO-SiQ" secondAttribute="trailing" constant="40" id="H4C-2T-9nS"/>
+                            <constraint firstItem="ybT-wO-SiQ" firstAttribute="centerY" secondItem="VXS-Ci-6Cf" secondAttribute="centerY" id="aFF-q2-SnM"/>
+                            <constraint firstItem="ybT-wO-SiQ" firstAttribute="centerX" secondItem="VXS-Ci-6Cf" secondAttribute="centerX" id="cc9-ad-A9N"/>
+                            <constraint firstItem="ybT-wO-SiQ" firstAttribute="leading" secondItem="ccK-kJ-IIF" secondAttribute="leading" constant="40" id="ic1-XY-l2X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ccK-kJ-IIF"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="RCH-RE-hVH" id="QvC-lr-Liv"/>
+                        <outlet property="titleLabel" destination="Gbd-cF-X12" id="bhN-v0-jeb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nm2-C3-D7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="361" y="115"/>
+        </scene>
+    </scenes>
+</document>
