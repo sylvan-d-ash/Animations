@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         self.tableView.dataSource = self
 
         // presenter
-        self.presenter = MainViewPresenter()
+        self.presenter = MainViewPresenter(router: self)
         self.presenter.viewDidLoad()
     }
 
@@ -54,11 +54,25 @@ extension ViewController: UITableViewDelegate {
 }
 
 
+extension ViewController: MainViewRouterProtocol {
+    func transition(to scene: Scene) {
+
+        var viewController: UIViewController
+
+        switch scene {
+        case .simpleTextAnimation:
+            viewController = SimpleTextAnimationViewController.initFromStoryboard()
+        }
+
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
+
+
 private extension Scene {
     var title: String {
         switch self {
         case .simpleTextAnimation: return NSLocalizedString("Simple Text Animation", comment: "simple text animation")
-        @unknown default: return "**not implemented**"
         }
     }
 }

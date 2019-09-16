@@ -22,9 +22,19 @@ protocol MainViewPresenterProtocol {
 }
 
 
+protocol MainViewRouterProtocol: class {
+    func transition(to scene: Scene)
+}
+
+
 class MainViewPresenter: MainViewPresenterProtocol {
+    private weak var router: MainViewRouterProtocol!
     private var scenes: [Scene] = []
     var numberOfItems: Int { return self.scenes.count }
+
+    init(router: MainViewRouterProtocol) {
+        self.router = router
+    }
 
     func viewDidLoad() {
         self.scenes = [
@@ -37,6 +47,7 @@ class MainViewPresenter: MainViewPresenterProtocol {
     }
 
     func didSelect(rowAt index: Int) {
-        //
+        let scene = self.scenes[index]
+        self.router.transition(to: scene)
     }
 }
